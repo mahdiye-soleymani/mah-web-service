@@ -9,6 +9,6 @@ import java.util.Date;
 @Getter
 public class ExceptionResponse {
     private Date time;
-    private String exceptionMessage;
-    private String exceptionDetails;
+    private String reason;
+    private String address;
 }

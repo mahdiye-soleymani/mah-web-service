@@ -6,7 +6,6 @@ import com.clarity.restfulwebservice.model.Director;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -27,10 +26,10 @@ public class DirectorResource {
     @GetMapping(value = "/directors/{id}")
     public Director director(@PathVariable int id) {
 
-        Director director = directorDaoService.findADirector(id);
+        Director director = directorDaoService.findDirector(id);
 
         if (director == null)
-            throw new DirectorNotFoundException("id-" + id);
+            throw new DirectorNotFoundException(".:this id:" + id + "not found:.");
 
         return director;
     }
@@ -40,7 +39,15 @@ public class DirectorResource {
         Director saveDirector = directorDaoService.saveUser(director);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(saveDirector.getId()).toUri();
-       return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).build();
+    }
+
+    @DeleteMapping(value = "/directors/{id}")
+    public void deleteDirector(@PathVariable int id) {
+        Director director = directorDaoService.deleteDirectorById(id);
+        if (director == null)
+            throw new DirectorNotFoundException(".:this id:" + id + "not found:.");
+
     }
 
 }

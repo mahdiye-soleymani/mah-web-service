@@ -9,6 +9,6 @@ import java.util.Date;
 @Data
 public class Director {
     private Integer id;
-    public String name;
+    private String name;
     private Date birthDay;
 }

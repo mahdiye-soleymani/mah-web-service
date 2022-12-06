@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 @Component
@@ -22,7 +23,7 @@ public class DirectorDaoService {
         return directors;
     }
 
-    public Director findADirector(int id) {
+    public Director findDirector(int id) {
         for (Director director : directors) {
             if (director.getId() == (id)) {
                 return director;
@@ -37,6 +38,19 @@ public class DirectorDaoService {
         }
         directors.add(director);
         return director;
+    }
+
+    public Director deleteDirectorById(int id) {
+        Iterator<Director> iterator = directors.iterator();
+        while (iterator.hasNext()) {
+            Director director = iterator.next();
+            if (director.getId() == (id)) {
+                iterator.remove();
+                return director;
+            }
+
+        }
+        return null;
     }
 
 
