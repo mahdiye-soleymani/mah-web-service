@@ -3,6 +3,7 @@ package com.clarity.restfulwebservice.controller;
 import com.clarity.restfulwebservice.dao.DirectorDaoService;
 import com.clarity.restfulwebservice.exception.DirectorNotFoundException;
 import com.clarity.restfulwebservice.model.Director;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,13 +30,13 @@ public class DirectorResource {
         Director director = directorDaoService.findDirector(id);
 
         if (director == null)
-            throw new DirectorNotFoundException(".:this id:" + id + "not found:.");
+            throw new DirectorNotFoundException(".:this id { " + id + "} not found:.");
 
         return director;
     }
 
     @PostMapping(value = "/directors")
-    public ResponseEntity<Object> creatDirector(@RequestBody Director director) {
+    public ResponseEntity<Object> creatDirector(@Valid @RequestBody Director director) {
         Director saveDirector = directorDaoService.saveUser(director);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(saveDirector.getId()).toUri();
@@ -46,7 +47,7 @@ public class DirectorResource {
     public void deleteDirector(@PathVariable int id) {
         Director director = directorDaoService.deleteDirectorById(id);
         if (director == null)
-            throw new DirectorNotFoundException(".:this id:" + id + "not found:.");
+            throw new DirectorNotFoundException(".:this id { " + id + "} not found:.");
 
     }
 

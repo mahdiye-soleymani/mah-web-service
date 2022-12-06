@@ -10,5 +10,5 @@ import java.util.Date;
 public class ExceptionResponse {
     private Date time;
     private String reason;
-    private String address;
+    private String details;
 }
