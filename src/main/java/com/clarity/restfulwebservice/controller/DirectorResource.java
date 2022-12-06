@@ -5,6 +5,7 @@ import com.clarity.restfulwebservice.exception.DirectorNotFoundException;
 import com.clarity.restfulwebservice.model.Director;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.apache.catalina.util.ResourceSet;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -20,7 +21,7 @@ public class DirectorResource {
     private final DirectorDaoService directorDaoService;
 
     @GetMapping(value = "/all-director")
-    public List<Director> directorList() {
+    public List<Director> retrieveAllDirectors() {
         return directorDaoService.findAll();
     }
 
@@ -31,6 +32,10 @@ public class DirectorResource {
 
         if (director == null)
             throw new DirectorNotFoundException(".:this id { " + id + "} not found:.");
+//        Resource<Director> resource = new Resource<>(director);
+//
+//        ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveAllDirectors());
+//        resource.add(linkTo.withRel("all-directors"));
 
         return director;
     }
