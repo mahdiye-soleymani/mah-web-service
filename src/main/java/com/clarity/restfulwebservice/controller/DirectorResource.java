@@ -20,7 +20,7 @@ public class DirectorResource {
     //    @Autowired
     private final DirectorDaoService directorDaoService;
 
-    @GetMapping(value = "/all-director")
+    @GetMapping(value = "/directors")
     public List<Director> retrieveAllDirectors() {
         return directorDaoService.findAll();
     }
