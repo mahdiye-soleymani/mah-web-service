@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice.model;
+package com.mahdiyeh.restfulwebservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

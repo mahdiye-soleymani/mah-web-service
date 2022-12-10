@@ -1,6 +1,6 @@
-package com.clarity.restfulwebservice.dao;
+package com.mahdiyeh.restfulwebservice.dao;
 
-import com.clarity.restfulwebservice.model.Director;
+import com.mahdiyeh.restfulwebservice.model.Director;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

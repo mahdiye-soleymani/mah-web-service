@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice.versioning;
+package com.mahdiyeh.restfulwebservice.versioning;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ActorV1 {
-    private String name;
+public class Name {
+    private String firstName;
+    private String lastName;
 }

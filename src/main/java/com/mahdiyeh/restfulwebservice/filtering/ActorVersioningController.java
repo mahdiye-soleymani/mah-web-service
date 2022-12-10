@@ -1,8 +1,8 @@
-package com.clarity.restfulwebservice.filtering;
+package com.mahdiyeh.restfulwebservice.filtering;
 
-import com.clarity.restfulwebservice.versioning.ActorV1;
-import com.clarity.restfulwebservice.versioning.ActorV2;
-import com.clarity.restfulwebservice.versioning.Name;
+import com.mahdiyeh.restfulwebservice.versioning.ActorV1;
+import com.mahdiyeh.restfulwebservice.versioning.ActorV2;
+import com.mahdiyeh.restfulwebservice.versioning.Name;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice.model;
+package com.mahdiyeh.restfulwebservice.model;
 
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;

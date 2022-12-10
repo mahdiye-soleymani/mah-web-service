@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice;
+package com.mahdiyeh.restfulwebservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

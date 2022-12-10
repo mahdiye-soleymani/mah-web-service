@@ -1,6 +1,6 @@
-package com.clarity.restfulwebservice.controller;
+package com.mahdiyeh.restfulwebservice.controller;
 
-import com.clarity.restfulwebservice.model.Welcome;
+import com.mahdiyeh.restfulwebservice.model.Welcome;
 import lombok.AllArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

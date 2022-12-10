@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice.filtering;
+package com.mahdiyeh.restfulwebservice.filtering;
 
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;

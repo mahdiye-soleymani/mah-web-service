@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice;
+package com.mahdiyeh.restfulwebservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

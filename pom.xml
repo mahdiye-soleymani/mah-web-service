@@ -8,7 +8,7 @@
         <version>3.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.clarity</groupId>
+    <groupId>com.mahdiyeh</groupId>
     <artifactId>restful-web-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mah-web-service</name>

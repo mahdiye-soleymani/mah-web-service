@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice.exception;
+package com.mahdiyeh.restfulwebservice.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

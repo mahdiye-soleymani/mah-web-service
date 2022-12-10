@@ -1,4 +1,4 @@
-package com.clarity.restfulwebservice.exception;
+package com.mahdiyeh.restfulwebservice.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
