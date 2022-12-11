@@ -2,6 +2,7 @@ package com.mahdiyeh.restfulwebservice.controller;
 
 import com.mahdiyeh.restfulwebservice.exception.DirectorNotFoundException;
 import com.mahdiyeh.restfulwebservice.model.Director;
+import com.mahdiyeh.restfulwebservice.model.Movie;
 import com.mahdiyeh.restfulwebservice.repository.DirectorRepository;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -46,4 +47,13 @@ public class DirectorJpaResource {
         directorRepository.deleteById(id);
     }
 
+    @GetMapping(value = "/jpa/directors/{id}/movies")
+    public List<Movie> retrieveAllDirectors(@PathVariable int id) {
+        Optional<Director> directorOptional= directorRepository.findById(id);
+        if (directorOptional.isEmpty()){
+            throw new DirectorNotFoundException(".:this id {" + id + "} not found:.");
+        }
+
+        return directorOptional.get().getMovies();
+    }
 }

@@ -14,9 +14,9 @@ public class DirectorDaoService {
     private int idCount = 3;
 
     static {
-        directors.add(new Director(1, "Nolan"));
-        directors.add(new Director(2, "Hitchcock"));
-        directors.add(new Director(3, "Coppola"));
+//        directors.add(new Director(1, "Nolan"));
+//        directors.add(new Director(2, "Hitchcock"));
+//        directors.add(new Director(3, "Coppola"));
     }
 
     public List<Director> findAll() {
