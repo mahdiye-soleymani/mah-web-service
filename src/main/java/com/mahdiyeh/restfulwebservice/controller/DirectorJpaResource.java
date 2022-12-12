@@ -27,9 +27,7 @@ public class DirectorJpaResource {
 
     @GetMapping(value = "/jpa/directors/{id}")
     public Optional<Director> director(@PathVariable int id) {
-
         Optional<Director> director = directorRepository.findById(id);
-
         if (director.isEmpty())
             throw new DirectorNotFoundException(".:this id {" + id + "} not found:.");
         return director;
@@ -48,12 +46,11 @@ public class DirectorJpaResource {
     }
 
     @GetMapping(value = "/jpa/directors/{id}/movies")
-    public List<Movie> retrieveAllDirectors(@PathVariable int id) {
+    public List<Movie> retrieveAllDirectorsMovies(@PathVariable int id) {
         Optional<Director> directorOptional= directorRepository.findById(id);
         if (directorOptional.isEmpty()){
             throw new DirectorNotFoundException(".:this id {" + id + "} not found:.");
         }
-
         return directorOptional.get().getMovies();
     }
 }

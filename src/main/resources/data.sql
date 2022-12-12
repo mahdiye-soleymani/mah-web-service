@@ -8,10 +8,10 @@ insert into director
 values (102, 'Nolan');
 
 insert into movie
-values (1, 'God father', 100);
+values (11, 'God father', 100);
 
 insert into movie
-values (2, 'Vertigo', 101);
+values (12, 'Vertigo', 101);
 
 insert into movie
-values (3, 'Dark Night', 102);
+values (13, 'Dark Night', 102);
